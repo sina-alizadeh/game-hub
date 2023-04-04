@@ -1,12 +1,12 @@
-import React, { useRef } from "react";
+import React, { FC, useRef } from "react";
 import { Input, InputGroup, InputLeftElement } from "@chakra-ui/react";
 import { BsSearch } from "react-icons/bs";
 
-interface Props {
+interface IProps {
   onSearch: (searchText: string) => void;
 }
 
-const SearchInput = ({ onSearch }: Props) => {
+const SearchInput: FC<IProps> = ({ onSearch }) => {
   const ref = useRef<HTMLInputElement>(null);
   return (
     <form

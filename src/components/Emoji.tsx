@@ -1,14 +1,14 @@
-import React from "react";
+import React, { FC } from "react";
 import bullsEye from "../assets/bulls-eye.webp";
 import thumbsUp from "../assets/thumbs-up.webp";
 import meh from "../assets/meh.webp";
 import { Image, ImageProps } from "@chakra-ui/react";
 
-interface Props {
+interface IProps {
   rating: number;
 }
 
-const Emoji = ({ rating }: Props) => {
+const Emoji: FC<IProps> = ({ rating }) => {
   if (rating < 3) return null;
   const emojiMap: { [key: number]: ImageProps } = {
     3: { src: meh, alt: "meh", boxSize: "25px" },

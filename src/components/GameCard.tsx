@@ -4,11 +4,12 @@ import PlatformIconList from "./PlatformIconList";
 import CriticScore from "./CriticScore";
 import getCroppedImageUrl from "../services/image-url";
 import Emoji from "./Emoji";
-interface Props {
+import { FC } from "react";
+interface IProps {
   game: Game;
 }
 
-const GameCard = ({ game }: Props) => {
+const GameCard: FC<IProps> = ({ game }) => {
   return (
     <Card boxShadow="">
       <Image src={getCroppedImageUrl(game.background_image)} />

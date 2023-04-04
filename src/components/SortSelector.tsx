@@ -1,13 +1,13 @@
-import React from "react";
+import React, { FC } from "react";
 import { Button, Menu, MenuButton, MenuItem, MenuList } from "@chakra-ui/react";
 import { BsChevronDown } from "react-icons/bs";
 
-interface Props {
+interface IProps {
   onSelectSortOrder: (sortOrder: string) => void;
   sortOrder: string;
 }
 
-const SortSelector = ({ onSelectSortOrder, sortOrder }: Props) => {
+const SortSelector: FC<IProps> = ({ onSelectSortOrder, sortOrder }) => {
   const sortOrders = [
     { value: "", label: "Relevance" },
     { value: "-added", label: "Date added" },

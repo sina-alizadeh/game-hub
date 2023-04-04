@@ -1,11 +1,11 @@
-import { ReactNode } from "react";
+import { FC, ReactNode } from "react";
 import { Box, useColorMode } from "@chakra-ui/react";
 
-interface Props {
+interface IProps {
   children: ReactNode;
 }
 
-const GameCardContainer = ({ children }: Props) => {
+const GameCardContainer: FC<IProps> = ({ children }) => {
   const { colorMode } = useColorMode();
   return (
     <Box

@@ -1,8 +1,8 @@
-import React from "react";
+import React, { FC } from "react";
 import { Card, Skeleton, SkeletonText } from "@chakra-ui/react";
 import { CardBody } from "@chakra-ui/react";
 
-const GameCardSkeleton = () => {
+const GameCardSkeleton: FC = () => {
   return (
     <Card>
       <Skeleton height="200px" />

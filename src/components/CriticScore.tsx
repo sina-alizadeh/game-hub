@@ -1,11 +1,11 @@
-import React from "react";
+import React, { FC } from "react";
 import { Badge } from "@chakra-ui/react";
 
-interface Props {
+interface IProps {
   score: number;
 }
 
-const CriticScore = ({ score }: Props) => {
+const CriticScore: FC<IProps> = ({ score }) => {
   let color = score > 75 ? "green" : score > 60 ? "yellow " : "";
   return (
     <Badge colorScheme={color} fontSize="14px" paddingX={2} borderRadius="4px">

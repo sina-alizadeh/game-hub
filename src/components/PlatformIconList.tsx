@@ -1,4 +1,4 @@
-import React from "react";
+import React, { FC } from "react";
 import {
   FaWindows,
   FaPlaystation,
@@ -14,11 +14,11 @@ import { HStack, Icon } from "@chakra-ui/react";
 import { Platform } from "../hooks/useGames";
 import { IconType } from "react-icons";
 
-interface Props {
+interface IProps {
   platforms: Platform[];
 }
 
-const PlatformIconList = ({ platforms }: Props) => {
+const PlatformIconList: FC<IProps> = ({ platforms }) => {
   const iconMap: { [key: string]: IconType } = {
     pc: FaWindows,
     playstation: FaPlaystation,
